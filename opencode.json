@@ -1,0 +1,19 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "vllm": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Chatterbox",
+      "options": {
+        "baseURL": "https://chatterbox.ee.cooper.edu/api/v1",
+        "apiKey": "{env:CHATTERBOX_KEY}"
+      },
+      "models": {
+        "nvidia/Gemma-4-26B-A4B-NVFP4": {
+          "name": "Gemma 4 26B (Chatterbox)",
+          "limit": { "context": 131172, "output": 8192 }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+name: check
+
+on: [push, pull_request]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # check.py inspects branches
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Always runs, on every push, and fails the build if a key is committed.
+      - name: Scan for committed API keys
+        run: python check.py --secrets
+
+      # Reports on every lab. Does not fail the build — you are not expected
+      # to have finished Lab 9 in Week 2.
+      - name: Lab checklist status
+        run: python check.py || true

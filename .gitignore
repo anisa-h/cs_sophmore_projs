@@ -1,0 +1,14 @@
+# Never commit your API key.
+.env
+.env.*
+!.env.example
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.DS_Store
+
+# instructor notes, never in the student template
+SETUP-FOR-INSTRUCTOR.md

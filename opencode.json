@@ -6,7 +6,7 @@
       "name": "Chatterbox",
       "options": {
         "baseURL": "https://chatterbox.ee.cooper.edu/api/v1",
-        "apiKey": "{env:CHATTERBOX_KEY}"
+        "apiKey": "{env:chatterbox_key}"
       },
       "models": {
         "nvidia/Gemma-4-26B-A4B-NVFP4": {
